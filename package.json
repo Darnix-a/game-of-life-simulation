@@ -1,0 +1,13 @@
+{
+  "name": "game-of-life-simulation",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["game-of-life", "cellular-automata", "simulation", "javascript", "node"],
+  "author": "darni",
+  "license": "MIT",
+  "description": "Conway's Game of Life simulation running in a web browser with Node.js server"
+}

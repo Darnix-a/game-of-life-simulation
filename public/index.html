@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Conway's Game of Life</h1>
+            <p>Click cells to toggle them, select patterns, and watch evolution unfold!</p>
+        </header>
+        
+        <main class="game-layout">
+            <div class="game-area">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <div class="controls-panel">
+                <div class="control-section">
+                    <h3>⚡ Controls</h3>
+                    <div class="button-group">
+                        <button id="startBtn" class="btn btn-start">▶️ Start</button>
+                        <button id="pauseBtn" class="btn btn-pause" disabled>⏸️ Pause</button>
+                        <button id="resetBtn" class="btn btn-reset">🔄 Reset</button>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>⚡ Speed Control</h3>
+                    <div class="speed-control">
+                        <label for="speedSlider">Speed: <span id="speedValue">10</span> FPS</label>
+                        <input type="range" id="speedSlider" min="1" max="30" value="10" class="slider">
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>📐 Grid Settings</h3>
+                    <div class="grid-controls">
+                        <button id="clearBtn" class="btn btn-secondary">🧹 Clear Grid</button>
+                        <button id="randomBtn" class="btn btn-secondary">🎲 Random Fill</button>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>🎨 Patterns</h3>
+                    <div class="pattern-controls">
+                        <select id="patternSelect" class="pattern-select">
+                            <option value="">Select a Pattern</option>
+                            <option value="glider">🚀 Glider</option>
+                            <option value="blinker">💫 Blinker</option>
+                            <option value="toad">🐸 Toad</option>
+                            <option value="beacon">🏮 Beacon</option>
+                            <option value="pulsar">⭐ Pulsar</option>
+                            <option value="gliderGun">🔫 Glider Gun</option>
+                            <option value="spaceship">🛸 Lightweight Spaceship</option>
+                        </select>
+                        <button id="loadPatternBtn" class="btn btn-pattern" disabled>Load Pattern</button>
+                    </div>
+                    <div class="pattern-preview">
+                        <canvas id="previewCanvas" width="100" height="100"></canvas>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>📊 Statistics</h3>
+                    <div class="stats">
+                        <div class="stat-item">Generation: <span id="generationCount">0</span></div>
+                        <div class="stat-item">Living Cells: <span id="aliveCells">0</span></div>
+                        <div class="stat-item">Population: <span id="populationBar" class="population-bar"></span></div>
+                    </div>
+                </div>
+
+                <div class="control-section instructions">
+                    <h3>ℹ️ How to Play</h3>
+                    <ul>
+                        <li>Click on cells to make them alive</li>
+                        <li>Use patterns to get started quickly</li>
+                        <li>Adjust speed to watch evolution</li>
+                        <li>Observe the cellular automata rules</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
