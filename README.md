@@ -2,8 +2,6 @@
 
 A beautiful, interactive implementation of Conway's Game of Life cellular automaton, built with vanilla JavaScript and Node.js.
 
-![Game of Life Screenshot](https://via.placeholder.com/800x400?text=Conway%27s+Game+of+Life+Screenshot)
-
 ## ✨ Features
 
 ### 🎯 Core Functionality
@@ -169,5 +167,6 @@ MIT License - feel free to use this project for learning, teaching, or building 
 ---
 
 **Enjoy exploring the fascinating world of cellular automata!** 🌟
+
 
 For questions or suggestions, feel free to open an issue or contribute to the project.
